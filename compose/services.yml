@@ -1,0 +1,28 @@
+version: "3.5"
+
+services:
+  apigateway:
+    image: apigateway:1.0
+    container_name: apigateway
+    restart: always
+    ports:
+      - 5000:80
+      - 5010:443
+    networks:
+      - s3
+
+  registration:
+    image: registration:1.0
+    container_name: registration
+    restart: always
+    ports:
+      - 5001:80 
+    networks:
+      - s3
+
+ 
+
+networks:
+  s3:
+    name: s3-network
+    external: false
