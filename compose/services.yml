@@ -11,12 +11,21 @@ services:
     networks:
       - s3
 
-  registration:
-    image: registration:1.0
-    container_name: registration
+  identity:
+    image: identity-service:1.0
+    container_name: identity-service
     restart: always
     ports:
       - 5001:80 
+    networks:
+      - s3
+
+  registration:
+    image: registration-service:1.0
+    container_name: registration-service
+    restart: always
+    ports:
+      - 5002:80 
     networks:
       - s3
 
