@@ -4,11 +4,11 @@
 cd .. 
 cd ..
 
-	echo "Enter a commit message: "
-	read COMMIT_MESSAGE
+	read -p "Enter a commit message: " COMMIT_MESSAGE
+	#read COMMIT_MESSAGE
 
-	echo "Enter password: "
-	read PASSWORD
+	read -ps "Enter password: " PASSWORD
+	#read PASSWORD
 
 PREFIX=LNX-S3
 SERVICE=$PREFIX.Services
@@ -23,7 +23,8 @@ REPOSITORIES=($PREFIX $PREFIX.ApiGateway $PREFIX.Common $SERVICE.Identity $SERVI
       cd $REPOSITORY
       git add --all
       git commit -m $COMMIT_MESSAGE
-      git remote add origin https://abibtj:$PASSWORD@bitbucket.org/abibtj/$REPOSITORY.git
+      $git remote add origin https://abibtj:$PASSWORD@bitbucket.org/abibtj/$REPOSITORY.git
+      git push https://abibtj:$PASSWORD@bitbucket.org/abibtj/$REPOSITORY.git --all 
       git push origin master
       cd ..
     done
