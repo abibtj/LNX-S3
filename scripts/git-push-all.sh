@@ -7,7 +7,7 @@ cd ..
 	read -p "Enter a commit message: " COMMIT_MESSAGE
 	#read COMMIT_MESSAGE
 
-	read -ps "Enter password: " PASSWORD
+	read -sp "Enter password: " PASSWORD
 	#read PASSWORD
 
 PREFIX=LNX-S3
