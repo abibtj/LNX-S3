@@ -23,8 +23,6 @@ REPOSITORIES=($PREFIX $PREFIX.ApiGateway $PREFIX.Common $SERVICE.Identity $SERVI
       cd $REPOSITORY
       git add --all
       git commit -m $COMMIT_MESSAGE
-      #git remote add origin https://abibtj:$PASSWORD@bitbucket.org/abibtj/$REPOSITORY.git
-      git push https://abibtj:$PASSWORD@bitbucket.org/abibtj/$REPOSITORY.git --all 
-      #git push origin master
+      git push https://abibtj:$PASSWORD@bitbucket.org/abibtj/$REPOSITORY.git --all
       cd ..
     done
