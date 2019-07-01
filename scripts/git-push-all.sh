@@ -13,6 +13,11 @@ if [ "$1" = "-p" ]
       echo ========================================================
       echo Pushing repository: $REPOSITORY to remote server
       echo ========================================================
+
+	# Move to the root directory
+	cd .. 
+	cd ..
+
       cd $REPOSITORY
       git add --all
       git commit -m "Second commit."
