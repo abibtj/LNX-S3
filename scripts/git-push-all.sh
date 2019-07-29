@@ -24,3 +24,7 @@ REPOSITORIES=($PREFIX $PREFIX.ApiGateway $PREFIX.Common $SERVICE.Identity $SERVI
       git push https://abibtj:$PASSWORD@bitbucket.org/abibtj/$REPOSITORY.git --all
       cd ..
     done
+
+
+# Beep to indicate successful compeletion
+echo -ne '\007'

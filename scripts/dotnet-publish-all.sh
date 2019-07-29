@@ -19,3 +19,6 @@ do
      $PUBLISH
      cd ..
 done
+
+# Beep to indicate successful compeletion
+echo -ne '\007'

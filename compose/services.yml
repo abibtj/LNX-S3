@@ -4,34 +4,38 @@ services:
   apigateway:
     image: apigateway:1.0
     container_name: apigateway
+    hostname: apigateway
     restart: always
     ports:
       - 5000:80
       - 5010:443
     networks:
-      - s3
+      - s3-network
 
-  identity:
+  identity-service:
     image: identity-service:1.0
     container_name: identity-service
+    hostname: identity-service
     restart: always
     ports:
-      - 5001:80 
+      - 5001:80   # Important: In a production environment you should remove the external port (5001) kept here for microservice debugging purposes.
+                  # The API Gateway redirects and access through the internal port (80).
     networks:
-      - s3
+      - s3-network
 
-  registration:
+  registration-service:
     image: registration-service:1.0
     container_name: registration-service
+    hostname: registration-service
     restart: always
     ports:
-      - 5002:80 
+      - 5002:80   # Important: In a production environment you should remove the external port (5002) kept here for microservice debugging purposes.
+                  # The API Gateway redirects and access through the internal port (80).
     networks:
-      - s3
-
- 
+      - s3-network
 
 networks:
-  s3:
+  s3-network:
     name: s3-network
+    driver: bridge
     external: false
