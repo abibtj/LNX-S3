@@ -14,6 +14,10 @@ REPOSITORIES=($PREFIX $PREFIX.ApiGateway $PREFIX.Common $SERVICE.Identity $SERVI
 
     for REPOSITORY in ${REPOSITORIES[*]}
     do
+      
+      echo ""
+      echo ""
+
       echo ========================================================
       echo Pushing repository: $REPOSITORY to remote servers
       echo ========================================================
