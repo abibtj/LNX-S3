@@ -45,6 +45,15 @@ services:
     networks:
       - s3-network
 
+  blazor-webui:
+    image: blazor-webui:1.0
+    container_name: blazor-webui
+    hostname: reblazor-webui
+    restart: always
+    ports:
+      - 5009:80   
+      - 5019:443   
+
 networks:
   s3-network:
     name: s3-network
