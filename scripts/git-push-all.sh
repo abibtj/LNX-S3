@@ -10,7 +10,7 @@ cd ..
 
 PREFIX=LNX-S3
 SERVICE=$PREFIX.Services
-REPOSITORIES=($PREFIX $PREFIX.ApiGateway $PREFIX.Common $SERVICE.Identity $SERVICE.Record $SERVICE.Registration $PREFIX.WebUI.Blazr)
+REPOSITORIES=($PREFIX $PREFIX.ApiGateway $PREFIX.Common $SERVICE.Identity $SERVICE.Record $SERVICE.Registration $PREFIX.WebUI.cBlazor $PREFIX.WebUI.sBlazor)
 
     for REPOSITORY in ${REPOSITORIES[*]}
     do
