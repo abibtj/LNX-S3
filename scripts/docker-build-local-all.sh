@@ -7,7 +7,7 @@ cd ..
 BUILD=./scripts/docker-build-local.sh
 PREFIX=LNX-S3
 SERVICE=$PREFIX.Services
-REPOSITORIES=($PREFIX.ApiGateway $SERVICE.Identity $SERVICE.Record $SERVICE.Registration $PREFIX.WebUI.cBlazor $PREFIX.WebUI.sBlazor)
+REPOSITORIES=($PREFIX.ApiGateway $SERVICE.Identity $SERVICE.Notification $SERVICE.Record $SERVICE.Registration $PREFIX.WebUI.cBlazor $PREFIX.WebUI.sBlazor)
 
 for REPOSITORY in ${REPOSITORIES[*]}
 do
