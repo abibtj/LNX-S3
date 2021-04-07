@@ -29,7 +29,7 @@ services:
     hostname: notification-service
     restart: always
     ports:
-      - 5002:80   # Important: In a production environment you should remove the external port (5001) kept here for microservice debugging purposes.
+      - 5002:80   # Important: In a production environment you should remove the external port (5002) kept here for microservice debugging purposes.
                   # The API Gateway redirects and access through the internal port (80).
     networks:
       - s3-network
@@ -40,7 +40,7 @@ services:
     hostname: record-service
     restart: always
     ports:
-      - 5003:80   # Important: In a production environment you should remove the external port (5001) kept here for microservice debugging purposes.
+      - 5003:80   # Important: In a production environment you should remove the external port (5003) kept here for microservice debugging purposes.
                   # The API Gateway redirects and access through the internal port (80).
     networks:
       - s3-network
@@ -51,7 +51,7 @@ services:
     hostname: registration-service
     restart: always
     ports:
-      - 5004:80   # Important: In a production environment you should remove the external port (5002) kept here for microservice debugging purposes.
+      - 5004:80   # Important: In a production environment you should remove the external port (5004) kept here for microservice debugging purposes.
                   # The API Gateway redirects and access through the internal port (80).
     networks:
       - s3-network
@@ -59,7 +59,7 @@ services:
   blazor-webui:
     image: blazor-webui:1.0
     container_name: blazor-webui
-    hostname: reblazor-webui
+    hostname: blazor-webui
     restart: always
     ports:
       - 5009:80   
